@@ -1,0 +1,23 @@
+{
+  "name": "iron-file-chooser",
+  "homepage": "https://github.com/elrancid/iron-file-chooser",
+  "authors": [
+    "Davide Zeffiro <elrancid@gmail.com>"
+  ],
+  "description": "The `iron-file-chooser` element exposes input file select functionality to polymer.",
+  "main": "iron-file-chooser.html",
+  "keywords": [
+    "polymer",
+    "upload",
+    "file",
+    "input"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
