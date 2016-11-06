@@ -72,15 +72,18 @@ The `iron-file-chooser` element exposes input file select functionality.
         this._selecting = true;
         this.$.inputfiles.click();
       }
+      setTimeout(() => { // Reset after pressed cancel button
+        this._selecting = false;
+      },0);
   	},
     _onFilesSelected: function() {
+      this._selecting = false;
   		var files = this.$.inputfiles.files;
   		if (!files) return;
       //if(file.size > this.fileSizeLimit) return window.alert("File is too big. Please choose a file under 10MB.");
       //file.name = file.name + "?" + (Math.random() * 1000); // browser cache buster
   		this.fileList = files;
       //this.readableFileSize = this.getReadableFileSize(file.size);
-      this._selecting = false;
   	},
     _fileListChanged: function(to) {
       if (!to) this.$.inputfiles.value = '';
